@@ -21,6 +21,8 @@ def envir_mensagem(mensagem, lista_mensagems=[]):
 
 # Inicialização da lista de mensagens
 lista_mensagems = []
+# Eu posso adicionar uma mesnagem inicial para o chat 
+#lista_mensagems = [{"role": "system", "content": "Apartide de agora você é um assistente gente boa. E meu nome é ChatBJ, desenvolvida pelo BJ Tech!"}]
 
 # Loop de Conversa
 while True:
