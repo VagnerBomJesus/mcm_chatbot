@@ -37,33 +37,32 @@ Antes de usar o chatbot, certifique-se de ter instalado os seguintes componentes
 
 
 -------------------------------------------------
+
+
+
+
+
 import pyttsx3
 
-engine = pyttsx3.init(driverName='snd_rpi_googlevoicehat_soundcar')
+engine = pyttsx3.init()
 
-erro (vm_python) pi@raspberrypi:~/Desktop/mcm_chatbot $ python main.py
-Traceback (most recent call last):
-  File "/home/pi/Desktop/vm_python/lib/python3.7/site-packages/pyttsx3/__init__.py", line 20, in init
-    eng = _activeEngines[driverName]
-  File "/usr/lib/python3.7/weakref.py", line 137, in __getitem__
-    o = self.data[key]()
-KeyError: 'snd_rpi_googlevoicehat_soundcar'
+# Listar vozes disponíveis
+voices = engine.getProperty('voices')
+for voice in voices:
+    print("Voz:", voice.name, "Idioma:", voice.languages)
 
-During handling of the above exception, another exception occurred:
+# Escolher uma voz em um idioma específico (substitua 'pt' pelo código do idioma desejado)
+selected_voice = None
+for voice in voices:
+    if 'pt' in voice.languages[0]:
+        selected_voice = voice
+        break
 
-Traceback (most recent call last):
-  File "main.py", line 3, in <module>
-    engine = pyttsx3.init(driverName='snd_rpi_googlevoicehat_soundcar')
-  File "/home/pi/Desktop/vm_python/lib/python3.7/site-packages/pyttsx3/__init__.py", line 22, in init
-    eng = Engine(driverName, debug)
-  File "/home/pi/Desktop/vm_python/lib/python3.7/site-packages/pyttsx3/engine.py", line 30, in __init__
-    self.proxy = driver.DriverProxy(weakref.proxy(self), driverName, debug)
-  File "/home/pi/Desktop/vm_python/lib/python3.7/site-packages/pyttsx3/driver.py", line 50, in __init__
-    self._module = importlib.import_module(name)
-  File "/usr/lib/python3.7/importlib/__init__.py", line 127, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 965, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'pyttsx3.drivers.snd_rpi_googlevoicehat_soundcar'
+if selected_voice:
+    engine.setProperty('voice', selected_voice.id)
+    engine.say("Olá, esta é uma mensagem de teste em outro idioma.")
+    engine.runAndWait()
+else:
+    print("Voz no idioma desejado não encontrada.")
+
 
