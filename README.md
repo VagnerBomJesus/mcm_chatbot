@@ -69,3 +69,17 @@ usbstream:CARD=sndrpigooglevoi
     snd_rpi_googlevoicehat_soundcar
     USB Stream Output
 
+
+
+---------------------------------
+
+
+
+import pyttsx3
+
+# Inicialize o mecanismo pyttsx3 com o driver identificado
+engine = pyttsx3.init(driverName='snd_rpi_googlevoicehat_soundcar')
+
+# Realize um teste para verificar se o driver está funcionando
+engine.say("Olá, esta é uma mensagem de teste.")
+engine.runAndWait()
