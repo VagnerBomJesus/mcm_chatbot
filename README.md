@@ -33,3 +33,39 @@ Antes de usar o chatbot, certifique-se de ter instalado os seguintes componentes
    ```
    python chatbot.py
    ```
+
+
+
+   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+
+   (vm_python) pi@raspberrypi:~/Desktop/mcm_chatbot $ aplay -L
+null
+    Discard all samples (playback) or generate zero samples (capture)
+jack
+    JACK Audio Connection Kit
+pulse
+    PulseAudio Sound Server
+default:CARD=sndrpigooglevoi
+    snd_rpi_googlevoicehat_soundcar, Google voiceHAT SoundCard HiFi voicehat-codec-0
+    Default Audio Device
+sysdefault:CARD=sndrpigooglevoi
+    snd_rpi_googlevoicehat_soundcar, Google voiceHAT SoundCard HiFi voicehat-codec-0
+    Default Audio Device
+dmix:CARD=sndrpigooglevoi,DEV=0
+    snd_rpi_googlevoicehat_soundcar, Google voiceHAT SoundCard HiFi voicehat-codec-0
+    Direct sample mixing device
+dsnoop:CARD=sndrpigooglevoi,DEV=0
+    snd_rpi_googlevoicehat_soundcar, Google voiceHAT SoundCard HiFi voicehat-codec-0
+    Direct sample snooping device
+hw:CARD=sndrpigooglevoi,DEV=0
+    snd_rpi_googlevoicehat_soundcar, Google voiceHAT SoundCard HiFi voicehat-codec-0
+    Direct hardware device without any conversions
+plughw:CARD=sndrpigooglevoi,DEV=0
+    snd_rpi_googlevoicehat_soundcar, Google voiceHAT SoundCard HiFi voicehat-codec-0
+    Hardware device with all software conversions
+usbstream:CARD=sndrpigooglevoi
+    snd_rpi_googlevoicehat_soundcar
+    USB Stream Output
+
