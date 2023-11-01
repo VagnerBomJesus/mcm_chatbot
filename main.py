@@ -1,4 +1,3 @@
-import os
 import openai
 import speech_recognition as sr
 import whisper
@@ -7,38 +6,23 @@ from tools import functions
 
 # Constants
 API_KEY = "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"
-AUDIO_FILE_NAME = "audio.wav"
-JSON_FILE_PATH = "tools/data/mensagens.json"
 
-# Current working directory
-path = os.getcwd()
 
-def save_file(data):
-    file_path = os.path.join(path, AUDIO_FILE_NAME)
-    with open(file_path, "wb") as f:
-        f.write(data)
 
-def get_user_input():
-    while True:
-        user_input = input('Bob: Escreva aqui a sua mensagem ("sair"): ')
-        if user_input == "sair":
-            print("Até já, espero ter ajudado!")
-            functions.talk("Até já, espero ter ajudado!")
 
-            return None
-        yield user_input
+
 
 def main():
     openai.api_key = API_KEY
     model = whisper.load_model("base")
 
     # Load messages from a JSON file using the 'functions' module
-    message_list = functions.load_messages_from_file(JSON_FILE_PATH)
+    message_list = functions.load_messages_from_file(functions.JSON_FILE_PATH)
 
     recognizer = sr.Recognizer()  # Create the recognizer instance outside the loop
 
     with sr.Microphone() as mic:
-        for user_input in get_user_input():
+        for user_input in functions.get_user_input():
             if not user_input:
                 break
 

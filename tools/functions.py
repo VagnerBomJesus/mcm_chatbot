@@ -1,6 +1,14 @@
 import json
 import openai
 import pyttsx3  # pip install pyttsx3
+import os
+
+# Current working directory
+path = os.getcwd()
+
+# Constants
+AUDIO_FILE_NAME = "audio.wav"
+JSON_FILE_PATH = "tools/data/mensagens.json"
 
 
 # carregar o datas
@@ -50,3 +58,19 @@ def talk(texto):
     engine.say(texto)
     engine.runAndWait()
     engine.stop()
+
+
+def save_file(data):
+    file_path = os.path.join(path, AUDIO_FILE_NAME)
+    with open(file_path, "wb") as f:
+        f.write(data)
+
+def get_user_input():
+    while True:
+        user_input = input('Bob: Escreva aqui a sua mensagem ("sair"): ')
+        if user_input == "sair":
+            print("Até já, espero ter ajudado!")
+            talk("Até já, espero ter ajudado!")
+
+            return None
+        yield user_input
