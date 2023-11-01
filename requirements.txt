@@ -1,2 +1,4 @@
 openai
 pyttsx3
+SpeechRecognition
+whisper-openai

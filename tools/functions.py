@@ -4,7 +4,7 @@ import pyttsx3  # pip install pyttsx3
 
 
 # carregar o datas
-def carregar_mensagens_de_arquivo(arquivo_json):
+def load_messages_from_file(arquivo_json):
     try:
         with open(arquivo_json, "r") as arquivo:
             lista_mensagens = json.load(arquivo)
@@ -20,7 +20,7 @@ def carregar_mensagens_de_arquivo(arquivo_json):
 
 
 # Função para enviar mensagens ao Chatbot
-def envir_mensagem(mensagem, lista_mensagems=[]):
+def send_message(mensagem, lista_mensagems=[]):
     # Adicionar a mensagem do usuário à lista de mensagens
     lista_mensagems.append({"role": "user", "content": mensagem})
 
