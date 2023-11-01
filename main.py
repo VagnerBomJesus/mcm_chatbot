@@ -1,9 +1,9 @@
 import openai
-import funtions
+from tools import funtions
 
 def main():
     # Nome do arquivo JSON que contém as mensagens
-    arquivo_json = "mensagens.json"
+    arquivo_json = "tools/data/mensagens.json"
     
     # Inicialização da Chave da API
     openai.api_key = "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"
@@ -14,7 +14,7 @@ def main():
     # Loop de Conversa
     while True:
         # Entrada do Usuário
-        texto = input('Eu sou o Bobby como Posso ajudar ("sair"): ')
+        texto = input('Eu sou o Bob como Posso ajudar ("sair"): ')
 
         # Verificação de Saída
         if texto == "sair":
