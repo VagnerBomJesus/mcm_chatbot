@@ -1,5 +1,5 @@
 # README - Chatbot
-
+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
 ## Descrição
 O Chatbot é um programa de inteligência artificial projetado para interagir com usuários de forma automatizada, respondendo a perguntas e fornecendo assistência em um formato de conversação natural. Este README fornece informações sobre como configurar, executar e personalizar o chatbot.
 
