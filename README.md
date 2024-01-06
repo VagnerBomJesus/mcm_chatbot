@@ -1,5 +1,10 @@
 # README - Chatbot
-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
+# ../../Desktop/virtualenv/bin/activate
+
+ username = "biomimicry"
+    password = "biomimicry"
+    cluster_name = "cluster0.y0qr26c"
+    dbname = "biomimicryBDR"
 ## Descrição
 O Chatbot é um programa de inteligência artificial projetado para interagir com usuários de forma automatizada, respondendo a perguntas e fornecendo assistência em um formato de conversação natural. Este README fornece informações sobre como configurar, executar e personalizar o chatbot.
 
@@ -33,9 +38,29 @@ Antes de usar o chatbot, certifique-se de ter instalado os seguintes componentes
    ```
    python chatbot.py
    ```
+``````
+sudo apt-get install flac
+``````
+## Este comando instalará o utilitário de linha de comando FLAC, que é usado pela biblioteca speech_recognition para converter o áudio gravado para o formato FLAC antes de enviá-lo para o serviço de reconhecimento de voz do Google.
 
 
 
+```
+pip install pyaudio
+```
+## Se você encontrar problemas ao instalar o pyaudio diretamente com pip, pode ser necessário instalar algumas dependências do sistema primeiro. 
+
+````
+sudo apt-get install portaudio19-dev python-pyaudio python3-pyaudio
+````
+## Depois de instalar as dependências, tente instalar o pyaudio novamente com pip. Se ainda assim encontrar dificuldades, pode ser necessário buscar soluções específicas para a instalação do pyaudio no Raspberry Pi, pois às vezes a instalação pode variar dependendo da configuração do hardware e do sistema operacional.
+
+
+````
+sudo apt-get install espeak
+
+````
+## Este comando instalará o espeak e suas dependências no seu Raspberry Pi.
 -------------------------------------------------
 
 
