@@ -1,6 +1,9 @@
 # README - Chatbot
 # ../../Desktop/virtualenv/bin/activate
-
+# ELEVEN LABS
+- 6197176b683e266ef8224debc2dfbc9b
+- 5961ea0afb983651c3229cc643582dcb
+#
  username = "biomimicry"
     password = "biomimicry"
     cluster_name = "cluster0.y0qr26c"
