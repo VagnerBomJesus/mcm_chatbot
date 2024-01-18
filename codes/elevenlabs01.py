@@ -12,7 +12,7 @@ resumo_do_texto = """
 Olá eu sou o Bob, seja bem vindo vagner!
 """
 
-# Escolha sua voz
+# Escolha sua voz and Michael, Paul
 voz_escolhida = "Paul" 
 
 #Configure a voz
