@@ -1,5 +1,25 @@
 # README - Chatbot
 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
+
+
+#pip install adafruit-circuitpython-pca9685
+
+# Para instalar em todo o sistema (isso pode ser necessário em alguns casos):
+
+# sudo pip install adafruit-circuitpython-pca9685
+
+# pip install openai
+# pip install SpeechRecognition
+
+# pip install elevenlabs
+
+# pip install pyaudio
+
+# sudo apt-get install -y portaudio19-dev python3-pyaudio
+
+# pip install openai==0.28"
+
+
 # ../../Desktop/virtualenv/bin/activate
 # ELEVEN LABS
 - 6197176b683e266ef8224debc2dfbc9b
